@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  Project2
+//  CountryFlagPickingGame
 //
 //  Created by Caner Çağrı on 5.01.2022.
 //

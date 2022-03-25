@@ -18,7 +18,7 @@
 
 /* Begin PBXFileReference section */
 		01532F4927B1925600D1B86C /* Scores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scores.swift; sourceTree = "<group>"; };
-		018650B82786370E00DAB710 /* Project2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		018650B82786370E00DAB710 /* CountryFlagPickingGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountryFlagPickingGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		018650BB2786370E00DAB710 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		018650BD2786370E00DAB710 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		018650BF2786370E00DAB710 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,7 +42,7 @@
 		018650AF2786370E00DAB710 = {
 			isa = PBXGroup;
 			children = (
-				018650BA2786370E00DAB710 /* Project2 */,
+				018650BA2786370E00DAB710 /* CountryFlagPickingGame */,
 				018650B92786370E00DAB710 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,12 +50,12 @@
 		018650B92786370E00DAB710 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				018650B82786370E00DAB710 /* Project2.app */,
+				018650B82786370E00DAB710 /* CountryFlagPickingGame.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		018650BA2786370E00DAB710 /* Project2 */ = {
+		018650BA2786370E00DAB710 /* CountryFlagPickingGame */ = {
 			isa = PBXGroup;
 			children = (
 				018650BB2786370E00DAB710 /* AppDelegate.swift */,
@@ -67,15 +67,15 @@
 				018650C62786370F00DAB710 /* LaunchScreen.storyboard */,
 				018650C92786370F00DAB710 /* Info.plist */,
 			);
-			path = Project2;
+			path = CountryFlagPickingGame;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		018650B72786370E00DAB710 /* Project2 */ = {
+		018650B72786370E00DAB710 /* CountryFlagPickingGame */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 018650CC2786370F00DAB710 /* Build configuration list for PBXNativeTarget "Project2" */;
+			buildConfigurationList = 018650CC2786370F00DAB710 /* Build configuration list for PBXNativeTarget "CountryFlagPickingGame" */;
 			buildPhases = (
 				018650B42786370E00DAB710 /* Sources */,
 				018650B52786370E00DAB710 /* Frameworks */,
@@ -85,9 +85,9 @@
 			);
 			dependencies = (
 			);
-			name = Project2;
+			name = CountryFlagPickingGame;
 			productName = Project2;
-			productReference = 018650B82786370E00DAB710 /* Project2.app */;
+			productReference = 018650B82786370E00DAB710 /* CountryFlagPickingGame.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -105,7 +105,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 018650B32786370E00DAB710 /* Build configuration list for PBXProject "Project2" */;
+			buildConfigurationList = 018650B32786370E00DAB710 /* Build configuration list for PBXProject "CountryFlagPickingGame" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -118,7 +118,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				018650B72786370E00DAB710 /* Project2 */,
+				018650B72786370E00DAB710 /* CountryFlagPickingGame */,
 			);
 		};
 /* End PBXProject section */
@@ -295,7 +295,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XSY7H53P5K;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Project2/Info.plist;
+				INFOPLIST_FILE = CountryFlagPickingGame/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -306,7 +306,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = CanerCagri.Project2;
+				PRODUCT_BUNDLE_IDENTIFIER = CanerCagri.CountryFlagPickingGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -323,7 +323,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XSY7H53P5K;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Project2/Info.plist;
+				INFOPLIST_FILE = CountryFlagPickingGame/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -334,7 +334,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = CanerCagri.Project2;
+				PRODUCT_BUNDLE_IDENTIFIER = CanerCagri.CountryFlagPickingGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -345,7 +345,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		018650B32786370E00DAB710 /* Build configuration list for PBXProject "Project2" */ = {
+		018650B32786370E00DAB710 /* Build configuration list for PBXProject "CountryFlagPickingGame" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				018650CA2786370F00DAB710 /* Debug */,
@@ -354,7 +354,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		018650CC2786370F00DAB710 /* Build configuration list for PBXNativeTarget "Project2" */ = {
+		018650CC2786370F00DAB710 /* Build configuration list for PBXNativeTarget "CountryFlagPickingGame" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				018650CD2786370F00DAB710 /* Debug */,

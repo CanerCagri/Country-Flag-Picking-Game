@@ -1,6 +1,6 @@
 //
 //  Scores.swift
-//  Project2
+//  CountryFlagPickingGame
 //
 //  Created by Caner Çağrı on 7.02.2022.
 //
