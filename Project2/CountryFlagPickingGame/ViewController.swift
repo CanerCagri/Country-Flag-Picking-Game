@@ -87,14 +87,16 @@ class ViewController: UIViewController {
             let lastScore = Scores(Score: score)
             previousScores.append(lastScore)
             save()
-            title = "COMPLETED! IT'S OVER!"
+            title = "GAME IS OVER!"
             ac = UIAlertController(title: title, message: "FINAL SCORE : \(score)", preferredStyle: .alert)
-            for (_,i2) in previousScores.enumerated() {
-                if score > i2.Score {
-                    ac.addTextField()
-                    ac.textFields![0].text = "HIGHEST SCORE IN GAME !!! CONGRATS"
+            for (i,i2) in previousScores.enumerated() {
+                if score > i2.Score && i + 2 == previousScores.count{
+                    let highScore = UIAlertAction(title: "HIGHEST SCORE IN GAME !!! CONGRATS", style: .default)
                     
+                    highScore.isEnabled = false
+                    ac.addAction(highScore)
                 }
+                
                 
                 
             }
