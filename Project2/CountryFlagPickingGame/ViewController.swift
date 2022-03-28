@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     var previousScores = [Scores]()
     var askedQuestionCount = 0
     
-    // 3 CHALLENGE DA OYUNA DAHIL EDILDI ..!
+    // All of the 3 challenges added to game!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,32 +28,21 @@ class ViewController: UIViewController {
         
         countries += ["estonia", "france", "germany", "ireland", "italy", "monaco", "nigeria", "poland", "russia", "spain", "uk", "us"]
         
-        // butonlarin disindaki kenarligi 1
         button1.layer.borderWidth = 1
         button2.layer.borderWidth = 1
         button3.layer.borderWidth = 1
-        
-        // butonlarin kenarliginin rengini  degisti. Main appin backgroundu beyaz oldugu icin beyaz renk iceren bayraklarla kotu gorunuyordu
         button1.layer.borderColor = UIColor.lightGray.cgColor
         button2.layer.borderColor = UIColor(red: 0.4, green: 0.5, blue: 0.3, alpha: 1.0).cgColor
         button3.layer.borderColor = UIColor.lightGray.cgColor
 
         askQuestion()
-        
-        
-        
         loadSavedData()
-        
-        
-        
     }
     
     func askQuestion(action : UIAlertAction! = nil ) {
         askedQuestionCount += 1
-        //rastgele olarak countries arrayindeki stringleri karistiriyor
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
-        
         
         button1.setImage(UIImage(named: countries[0]), for: .normal)
         button2.setImage(UIImage(named: countries[1]), for: .normal)
@@ -65,8 +54,7 @@ class ViewController: UIViewController {
     
     @IBAction func buttonTaped(_ sender: UIButton) {
         var title : String
-     
-        // secim yapildikdan sonra gelen uyarilar
+        
         if sender.tag == correctAnswer {
             title = "Correct"
             score += 1
@@ -74,15 +62,13 @@ class ViewController: UIViewController {
             title = "Wrong. That's the flag of : \(countries[sender.tag].uppercased())"
             score -= 1
         }
-        // 10 defa sordurduk ve en sonda final soru oldugunu soyle ve en son skoru gostererek bitirdik
         var ac = UIAlertController(title: title, message: "", preferredStyle: .alert)
-        // continue dedikten sonra tekrar askquestion foncunu cagiriyor yani oyun yenileniyor ve oynanmaya devam ediliyor.
+        
         if (askedQuestionCount < 10) {
             ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
         }else if (askedQuestionCount == 10){
             title = "FINAL QUESTION"
             ac.addAction(UIAlertAction(title: title, style: .default, handler: askQuestion))
-                
         }else {
             let lastScore = Scores(Score: score)
             previousScores.append(lastScore)
@@ -96,9 +82,6 @@ class ViewController: UIViewController {
                     highScore.isEnabled = false
                     ac.addAction(highScore)
                 }
-                
-                
-                
             }
             ac.addAction(UIAlertAction(title: "Play Again", style: .default) { [weak self] _ in
                 
@@ -108,14 +91,14 @@ class ViewController: UIViewController {
             })
             loadSavedData()
         }
-        
-        
         present(ac, animated: true )
     }
+    
     @objc func navCorrectScore() {
         previousScores.removeAll()
         save()
     }
+    
     func save() {
         let jsonEncoder = JSONEncoder()
         
@@ -126,6 +109,7 @@ class ViewController: UIViewController {
             print("Failed to save score")
         }
     }
+    
     func loadSavedData() {
         let defaults = UserDefaults.standard
         
