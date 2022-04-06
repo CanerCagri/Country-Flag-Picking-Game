@@ -24,9 +24,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(navCorrectScore))
-        
+
         countries += ["estonia", "france", "germany", "ireland", "italy", "monaco", "nigeria", "poland", "russia", "spain", "uk", "us"]
         
         button1.layer.borderWidth = 1
@@ -35,7 +33,7 @@ class ViewController: UIViewController {
         button1.layer.borderColor = UIColor.lightGray.cgColor
         button2.layer.borderColor = UIColor(red: 0.4, green: 0.5, blue: 0.3, alpha: 1.0).cgColor
         button3.layer.borderColor = UIColor.lightGray.cgColor
-
+        
         askQuestion()
         loadSavedData()
     }
@@ -82,7 +80,6 @@ class ViewController: UIViewController {
             save()
             title2 = "GAME IS OVER!"
             
-            
             ac = UIAlertController(title: title2, message: "FINAL SCORE : \(score)", preferredStyle: .alert)
             for (i,i2) in previousScores.enumerated() {
                 if score > i2.Score && i + 2 == previousScores.count{
@@ -121,10 +118,8 @@ class ViewController: UIViewController {
     
     func loadSavedData() {
         let defaults = UserDefaults.standard
-        
         if let savedScore = defaults.object(forKey: "previousScores") as? Data {
             let jsonDecoder = JSONDecoder()
-            
             do {
                 previousScores = try jsonDecoder.decode([Scores].self, from: savedScore)
             } catch {
